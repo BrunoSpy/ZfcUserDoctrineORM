@@ -10,7 +10,7 @@ class Module
     {
         $app     = $e->getParam('application');
         $sm      = $app->getServiceManager();
-        $options = $sm->get('zfcuser_module_options');
+        $options = $sm->get('lmcuser_module_options');
 
         // Add the default entity driver only if specified in configuration
         if ($options->getEnableDefaultEntities()) {
@@ -40,14 +40,14 @@ class Module
                 'zfcuser_doctrine_em' => 'Doctrine\ORM\EntityManager',
             ),
             'factories' => array(
-                'zfcuser_module_options' => function ($sm) {
+                'lmcuser_module_options' => function ($sm) {
                     $config = $sm->get('Configuration');
-                    return new Options\ModuleOptions(isset($config['zfcuser']) ? $config['zfcuser'] : array());
+                    return new Options\ModuleOptions(isset($config['lmcuser']) ? $config['lmcuser'] : array());
                 },
-                'zfcuser_user_mapper' => function ($sm) {
+                'lmcuser_user_mapper' => function ($sm) {
                     return new \ZfcUserDoctrineORM\Mapper\User(
                         $sm->get('zfcuser_doctrine_em'),
-                        $sm->get('zfcuser_module_options')
+                        $sm->get('lmcuser_module_options')
                     );
                 },
             ),
