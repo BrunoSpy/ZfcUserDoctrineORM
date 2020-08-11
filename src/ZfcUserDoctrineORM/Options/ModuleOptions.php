@@ -2,7 +2,7 @@
 
 namespace ZfcUserDoctrineORM\Options;
 
-use ZfcUser\Options\ModuleOptions as BaseModuleOptions;
+use LmcUser\Options\ModuleOptions as BaseModuleOptions;
 
 class ModuleOptions extends BaseModuleOptions
 {
