@@ -3,8 +3,8 @@
 namespace ZfcUserDoctrineORM\Mapper;
 
 use Doctrine\ORM\EntityManagerInterface;
-use ZfcUser\Entity\UserInterface;
-use ZfcUser\Mapper\User as ZfcUserMapper;
+use LmcUser\Entity\UserInterface;
+use LmcUser\Mapper\User as ZfcUserMapper;
 use ZfcUserDoctrineORM\Options\ModuleOptions;
 use Laminas\Hydrator\HydratorInterface;
 
